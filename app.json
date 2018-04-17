@@ -1,0 +1,34 @@
+{
+    "schemaVersion": "0.0.1",
+    "name": "Application121",
+    "services": [
+      {
+        "name": "Web1",
+        "description": "Web1 description.",
+        "osType": "Windows",
+        "codePackages": [
+          {
+            "name": "Web1",
+            "image": "runforever:dev",
+            "endpoints": [
+              {
+                "name": "Web1Listener",
+                "port": 8080
+              }
+            ],
+            "resources": {
+              "requests": {
+                "cpu": 1.0,
+                "memoryInGB": 1.0
+              }
+            }
+          }
+        ],
+        "replicaCount": 1,
+        "networkRefs": [
+          "Application121Network"
+        ]
+      }
+    ],
+    "description": "Application121 description."
+  }
